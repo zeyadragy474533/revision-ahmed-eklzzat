@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Department>
+
+	<table>
+    <tr>
+       <th>id</th>
+       <th>Name</th>
+       <th>Description</th>
+       <th>Actions</th>
+
+    </tr>
+
+    @foreach(var data in Model){
+        <tr>
+            <th>@data.id</th>
+            <th>@data.name</th>
+            <th>@data.description</th>
+            <th>@data.head_of_department</th>
+            <td>
+                <button class="btn btn-seccess">Update</button>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    }
+</table>
